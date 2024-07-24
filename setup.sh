@@ -1,2 +1,1 @@
-dir=`pwd`
-export PYTHONPATH="${PYTHONPATH}:${dir}"
+export PYTHONPATH="${PYTHONPATH}:${pwd}"

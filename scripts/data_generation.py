@@ -2,9 +2,9 @@ import gymnasium as gym
 
 import environments.bandits
 
-from utils.dataset_utils import Dataset
+from utils.dataset_utils import HistoriesDataset
 
-from algorithms.generation_baselines.generator_register import GENERATOR_CLASS
+from algorithms.algorithm_register import GENERATOR_CLASS
 
 from dataclasses import dataclass
 import pyrallis
@@ -20,11 +20,11 @@ class GenerationConfig:
         "n_arms": 10
     }
     file_name: str = "dataset.hdf5"
-    max_size: Optional[int] = None
+    resize_history: Optional[int] = 2
 
 def generate_histories(config: GenerationConfig):
 
-    histories = Dataset()
+    histories = None
 
     for environment_name in config.environments_list:
         # Init generator
@@ -32,6 +32,9 @@ def generate_histories(config: GenerationConfig):
         
         # Init environment
         environment = gym.make(environment_name)
+
+        if histories is None:
+            histories = HistoriesDataset(vocab_size=environment.get_action_space_size(), resize_history=config.resize_history)
         
         # Train algorithm
         generator.train(environment)
@@ -50,9 +53,11 @@ def generate_histories(config: GenerationConfig):
             generator.update_policy(action, reward)
 
         histories.append_data(np.array(curr_history, dtype=np.int32))
+        print(len(curr_history))
+
 
     # Save histories as hdf5 file
-    histories.write(config.file_name, max_size=config.max_size)
+    histories.write(config.file_name)
 
 
 @pyrallis.wrap()

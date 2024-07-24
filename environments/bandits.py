@@ -16,9 +16,15 @@ class BanditsEnv(gym.Env):
         self.random_generator = np.random.default_rng()
         self.probs = self.random_generator.uniform(low=0, high=1, size=n_arms)
         self.action_number = 0
-        self.observation = [1]
+        self.observation = [0]
         self.action_space = Discrete(n_arms)
         self.observation_space = Discrete(1)
+
+    def get_action_space_size(self):
+        return self.n_arms
+    
+    def get_observation_space_size(self):
+        return 1
 
     def step(self, action: int):
         self.action_number += 1

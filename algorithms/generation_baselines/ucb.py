@@ -1,7 +1,19 @@
 import numpy as np
+import pyrallis
 import math
+from dataclasses import asdict, dataclass
 
-class UCB:
+import torch
+import torch.nn as nn
+
+@dataclass
+class TrainConfig:
+
+    def __post_init__(self):
+        pass
+
+
+class UCB(nn.Module):
     def __init__(
             self,
             n_arms: int = 10
@@ -25,3 +37,11 @@ class UCB:
 
     def train(self, environment):
         pass
+
+
+@pyrallis.wrap()
+def train(config: TrainConfig):
+    return UCB(config)
+
+if __name__ == "__main__":
+    train()
