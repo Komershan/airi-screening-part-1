@@ -57,6 +57,15 @@ class DarkKeyToDoor(gym.Env):
 
     def state_to_pos(self, state):
         return np.array(divmod(state, self.size))
+    
+    def get_params_dict(self):
+        return {key:value for key, value in self.__dict__.items() if not key.startswith('__') and not callable(key)}
+    
+    def get_mapping_dict(self):
+        return self.mapping_dict
+    
+    def load_from_dict(self, dict):
+        self.__dict__.update(dict)
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed, options=options)
