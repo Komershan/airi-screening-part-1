@@ -1,0 +1,56 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+  0%|                                                                                                                                                     | 0/4000 [00:00<?, ?it/s]/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+  0%|                                                                                                                                             | 2/4000 [00:00<27:09,  2.45it/s]
+number of parameters: 25.53M
+running on device cuda
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  2%|███▍                                                                                                                                       | 100/4000 [00:34<22:39,  2.87it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  5%|██████▊                                                                                                                                    | 197/4000 [01:08<22:21,  2.84it/s]
+
+  5%|███████                                                                                                                                    | 204/4000 [01:11<22:13,  2.85it/s]
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 248, in <module>
+    train()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 230, in train
+    trainer.run()
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/trainer.py", line 90, in run
+    batch = [t.to(self.device) for t in batch]
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/trainer.py", line 90, in <listcomp>
+    batch = [t.to(self.device) for t in batch]
+KeyboardInterrupt

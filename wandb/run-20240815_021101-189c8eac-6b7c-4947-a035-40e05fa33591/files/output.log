@@ -1,0 +1,104 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.set_seed to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.set_seed` for environment variables or `env.get_wrapper_attr('set_seed')` that will search the reminding wrappers.
+  logger.warn(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  5%|█████▎                                                                                                     | 494/10000 [01:36<30:52,  5.13it/s]
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/resource_sharer.py", line 145, in _serve
+    send(conn, destination_pid)
+  File "/usr/lib/python3.10/multiprocessing/resource_sharer.py", line 50, in send
+    reduction.send_handle(conn, new_fd, pid)
+  File "/usr/lib/python3.10/multiprocessing/reduction.py", line 184, in send_handle
+    sendfds(s, [handle])
+  File "/usr/lib/python3.10/multiprocessing/reduction.py", line 149, in sendfds
+    sock.sendmsg([msg], [(socket.SOL_SOCKET, socket.SCM_RIGHTS, fds)])
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 239, in train
+    parallel_results = pool.map(calc_loss_on_episode, args)
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 768, in get
+    self.wait(timeout)
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 765, in wait
+    self._event.wait(timeout)
+  File "/usr/lib/python3.10/threading.py", line 607, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 173, in <module>
+    main()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 165, in main
+    train_tasks = generate_histories(generation_config, generator_config, train_tasks)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 60, in generate_histories
+    curr_history = generator.train(config=generator_config, environment=copy.deepcopy(environment))
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 120, in train
+    model, histories = train(config, environment)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 233, in train
+    with mp.Pool(processes=config.num_actors) as pool:
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 739, in __exit__
+    self.terminate()
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 657, in terminate
+    self._terminate()
+  File "/usr/lib/python3.10/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 732, in _terminate_pool
+    p.join()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 43, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+KeyboardInterrupt

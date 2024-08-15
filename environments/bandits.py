@@ -1,29 +1,39 @@
+'''
+Here I implement multi-armed bandits environment
+
+We can set distribution_type as uniform, odd and even
+
+Odd and even distribution types make reward probabilities bigger on odd and even arms
+When uniform distribution type generate probabilities uniformly
+'''
 import gymnasium as gym
 from gymnasium.spaces import Discrete, MultiDiscrete
 import numpy as np
 from numpy.random import Generator, PCG64
 
+
 class BanditsEnv(gym.Env):
     def __init__(
-            self,
-            n_arms: int,
-            max_steps: int,
-            generation_seed: int,
-            distribution_type: str = "uniform",
-            **kwargs
+        self,
+        n_arms: int,
+        max_steps: int,
+        seed: int,
+        distribution_type: str = "uniform",
+        **kwargs,
     ):
         self.mapping_dict = {
-            'n_arms': 'int',
-            'max_steps': 'int',
-            'probs': 'array',
-            'seed': 'int'
+            "n_arms": "int",
+            "max_steps": "int",
+            "probs": "array",
+            "seed": "int",
         }
 
         super().__init__(**kwargs)
+        self.seed = seed
         self.n_arms = n_arms
         self.max_steps = max_steps
         self.distribution_type = distribution_type
-        self.rng = Generator(PCG64())
+        self.rng = Generator(PCG64(self.seed))
         self.probs = np.zeros(n_arms)
         self.action_number = 0
         self.observation = [0]
@@ -35,11 +45,16 @@ class BanditsEnv(gym.Env):
     def step(self, action: int):
         self.action_number += 1
         reward = int(self.rng.uniform(low=0, high=1) <= self.probs[action])
-        return self.observation, reward, (self.action_number >= self.max_steps), None, {}
-    
+        return (
+            self.observation,
+            reward,
+            (self.action_number >= self.max_steps),
+            None,
+            {},
+        )
+
     def reset(self):
         super().reset(seed=self.seed)
-        self._set_probs()
         return self.get_observation()
 
     def get_action_space_size(self):
@@ -51,16 +66,20 @@ class BanditsEnv(gym.Env):
 
     def observation_to_int(self):
         return self.observation[0]
-    
+
     def get_observation(self):
         return self.observation
-    
+
     def get_params_dict(self):
-        return {key:value for key, value in self.__dict__.items() if not key.startswith('__') and not callable(key)}
-    
+        return {
+            key: value
+            for key, value in self.__dict__.items()
+            if not key.startswith("__") and not callable(key)
+        }
+
     def get_mapping_dict(self):
         return self.mapping_dict
-    
+
     def load_from_dict(self, dict):
         self.__dict__.update(dict)
         self.rng = Generator(PCG64(seed=self.seed))
@@ -72,14 +91,16 @@ class BanditsEnv(gym.Env):
             self.probs = np.random.random(self.n_arms)
         elif self.distribution_type in ["odd", "even"]:
             for i in range(0, 10, 2):
-                low_prob = self.rng.uniform(low=0, high=0.05)
+                low_prob = self.rng.uniform(low=0, high=0.1)
                 if self.distribution_type == "odd":
                     self.probs[i] = 1 - low_prob
                     self.probs[i + 1] = low_prob
                 else:
                     self.probs[i + 1] = 1 - low_prob
                     self.probs[i] = low_prob
-        
+
+    # I also provide equality operator in order to compare tasks
+    # I compare tasks when I generate them in data_generation script
     def __eq__(self, other):
         if type(other) is type(self):
             is_equal = True

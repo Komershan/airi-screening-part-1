@@ -1,0 +1,26 @@
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.observation_to_int to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.observation_to_int` for environment variables or `env.get_wrapper_attr('observation_to_int')` that will search the reminding wrappers.
+  logger.warn(
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 146, in <module>
+    benchmark()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 132, in benchmark
+    total_reward_baseline = run_env(baseline, config, agent_name=f"Baseline ({config.baseline})", sampled_task=sampled_task)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 56, in run_env
+    action = model.get_action(environment.observation_to_int())
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 126, in get_action
+    actor_output = self.actor(observation)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+TypeError: linear(): argument 'input' (position 1) must be Tensor, not numpy.ndarray

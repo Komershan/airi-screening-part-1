@@ -1,0 +1,32 @@
+number of parameters: 25.32M
+running on device cpu
+1550.7960205078125
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+  0%|                                                                                                                     | 0/20000 [00:00<?, ?it/s]/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+
+
+
+
+
+
+
+  0%|▏                                                                                                         | 24/20000 [00:15<3:39:14,  1.52it/s]
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 260, in <module>
+    train()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 242, in train
+    trainer.run()
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/trainer.py", line 98, in run
+    self.loss.backward()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_tensor.py", line 525, in backward
+    torch.autograd.backward(
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 267, in backward
+    _engine_run_backward(
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

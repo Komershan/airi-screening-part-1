@@ -1,0 +1,52 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/inspect.py", line 1716, in _shadowed_dict
+    class_dict = dict_attr.__get__(entry)["__dict__"]
+KeyError: '__dict__'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 174, in <module>
+    main()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 166, in main
+    train_tasks = generate_histories(generation_config, generator_config, train_tasks)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 60, in generate_histories
+    curr_history = generator.train_from_a2c(config=generator_config, environment=copy.deepcopy(environment))
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 120, in train_from_a2c
+    model, histories = train(config, environment)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 233, in train
+    optimizer = torch.optim.Adam(model.parameters(), lr=config.lr, betas=[config.beta_1, config.beta_2])
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/optim/adam.py", line 45, in __init__
+    super().__init__(params, defaults)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/optim/optimizer.py", line 284, in __init__
+    self.add_param_group(cast(dict, param_group))
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_compile.py", line 22, in inner
+    import torch._dynamo
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_dynamo/__init__.py", line 64, in <module>
+    torch.manual_seed = disable(torch.manual_seed)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_dynamo/decorators.py", line 50, in disable
+    return DisableContext()(fn)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 410, in __call__
+    (filename is None or trace_rules.check(fn))
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_dynamo/trace_rules.py", line 3378, in check
+    return check_verbose(obj, is_inlined_call).skipped
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_dynamo/trace_rules.py", line 3361, in check_verbose
+    rule = torch._dynamo.trace_rules.lookup_inner(
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_dynamo/trace_rules.py", line 3442, in lookup_inner
+    rule = get_torch_obj_rule_map().get(obj, None)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_dynamo/trace_rules.py", line 2782, in get_torch_obj_rule_map
+    obj = load_object(k)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_dynamo/trace_rules.py", line 2812, in load_object
+    val = unwrap_if_wrapper(val)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 558, in unwrap_if_wrapper
+    return unwrap_with_attr_name_if_wrapper(fn)[0]
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 567, in unwrap_with_attr_name_if_wrapper
+    elif is_function(fn) and inspect.getattr_static(fn, "_torchdynamo_inline", False):
+  File "/usr/lib/python3.10/inspect.py", line 1747, in getattr_static
+    klass_result = _check_class(klass, attr)
+  File "/usr/lib/python3.10/inspect.py", line 1698, in _check_class
+    if _shadowed_dict(type(entry)) is _sentinel:
+  File "/usr/lib/python3.10/inspect.py", line 1716, in _shadowed_dict
+    class_dict = dict_attr.__get__(entry)["__dict__"]
+KeyboardInterrupt

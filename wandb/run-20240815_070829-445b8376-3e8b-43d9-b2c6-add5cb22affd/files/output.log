@@ -1,0 +1,16 @@
+
+[40]
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.observation_to_int to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.observation_to_int` for environment variables or `env.get_wrapper_attr('observation_to_int')` that will search the reminding wrappers.
+  logger.warn(
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 150, in <module>
+    benchmark()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 142, in benchmark
+    total_reward_model = run_env(checkpoint_model, config, agent_name=f"{checkpoint}", sampled_task=sampled_task, finish=False)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 56, in run_env
+    action = model.get_action(environment.observation_to_int())
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/AD.py", line 199, in get_action
+    logits, loss = self.forward(torch.LongTensor([self.history[-(self.config.block_size - 2):]]))
+TypeError: cannot unpack non-iterable NoneType object

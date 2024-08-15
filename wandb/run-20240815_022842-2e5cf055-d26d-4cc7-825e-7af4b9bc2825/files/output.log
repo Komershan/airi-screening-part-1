@@ -1,0 +1,99 @@
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.set_seed to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.set_seed` for environment variables or `env.get_wrapper_attr('set_seed')` that will search the reminding wrappers.
+  logger.warn(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  6%|███████                                                                                                     | 325/5000 [01:03<15:07,  5.15it/s]
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/resource_sharer.py", line 138, in _serve
+    with self._listener.accept() as conn:
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 466, in accept
+    answer_challenge(c, self._authkey)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 757, in answer_challenge
+    response = connection.recv_bytes(256)        # reject large message
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/resource_sharer.py", line 138, in _serve
+    with self._listener.accept() as conn:
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 465, in accept
+    deliver_challenge(c, self._authkey)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 738, in deliver_challenge
+    connection.send_bytes(CHALLENGE + message)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 173, in <module>
+    main()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 165, in main
+    train_tasks = generate_histories(generation_config, generator_config, train_tasks)
+  File "/usr/lib/python3.10/multiprocessing/resource_sharer.py", line 138, in _serve
+    with self._listener.accept() as conn:
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 60, in generate_histories
+    curr_history = generator.train(config=generator_config, environment=copy.deepcopy(environment))
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 465, in accept
+    deliver_challenge(c, self._authkey)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 120, in train
+    model, histories = train(config, environment)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 738, in deliver_challenge
+    connection.send_bytes(CHALLENGE + message)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 239, in train
+    parallel_results = pool.map(calc_loss_on_episode, args)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 768, in get
+    self.wait(timeout)
+  File "/usr/lib/python3.10/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 765, in wait
+    self._event.wait(timeout)
+BrokenPipeError: [Errno 32] Broken pipe
+  File "/usr/lib/python3.10/threading.py", line 607, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt

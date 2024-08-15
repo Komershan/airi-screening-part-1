@@ -1,0 +1,18 @@
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.observation_to_int to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.observation_to_int` for environment variables or `env.get_wrapper_attr('observation_to_int')` that will search the reminding wrappers.
+  logger.warn(
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1532: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self._call_impl(*args, **kwargs)
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 146, in <module>
+    benchmark()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 132, in benchmark
+    total_reward_baseline = run_env(baseline, config, agent_name=f"Baseline ({config.baseline})", sampled_task=sampled_task)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 58, in run_env
+    model.update_policy(action, reward)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1709, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'A2C' object has no attribute 'update_policy'
+tensor([[40.]])
+tensor([0.0066, 0.0007, 0.4322, 0.5584, 0.0021], grad_fn=<SoftmaxBackward0>)

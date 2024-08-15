@@ -1,0 +1,82 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+  0%|                                                                                                                      | 0/8000 [00:00<?, ?it/s]/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+number of parameters: 25.53M
+running on device cuda
+  0%|                                                                                                              | 7/8000 [00:02<45:59,  2.90it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  1%|█▎                                                                                                          | 100/8000 [00:34<45:20,  2.90it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  2%|██▋                                                                                                         | 199/8000 [01:08<45:12,  2.88it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  4%|███▉                                                                                                        | 296/8000 [01:42<45:08,  2.84it/s]
+
+
+
+
+
+
+  4%|████▍                                                                                                       | 332/8000 [01:55<44:32,  2.87it/s]
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 253, in <module>
+    train()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 235, in train
+    trainer.run()
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/trainer.py", line 94, in run
+    logits, self.loss = model(x)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 181, in forward
+    mask = torch.tensor(np_mask * random_probs > self.config.mask_prob, dtype=torch.float64).to(device)
+KeyboardInterrupt

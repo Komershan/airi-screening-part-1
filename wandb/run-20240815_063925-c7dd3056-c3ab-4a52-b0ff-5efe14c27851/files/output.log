@@ -1,0 +1,56 @@
+number of parameters: 25.32M
+running on device cuda
+1569.779052734375
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+  0%|                                                                                                                     | 0/10000 [00:00<?, ?it/s]/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+
+
+  1%|▉                                                                                                           | 84/10000 [00:04<08:41, 19.03it/s]
+
+
+
+  2%|██                                                                                                         | 198/10000 [00:10<08:39, 18.87it/s]
+
+
+  3%|██▉                                                                                                        | 274/10000 [00:14<08:36, 18.84it/s]
+
+
+
+  4%|████▏                                                                                                      | 388/10000 [00:20<08:31, 18.78it/s]
+
+
+
+  5%|█████▎                                                                                                     | 500/10000 [00:26<08:26, 18.74it/s]
+
+
+  6%|██████▏                                                                                                    | 576/10000 [00:30<08:21, 18.79it/s]
+
+
+
+  7%|███████▎                                                                                                   | 688/10000 [00:36<08:19, 18.63it/s]
+
+
+
+  8%|████████▌                                                                                                  | 800/10000 [00:42<08:17, 18.50it/s]
+
+
+  9%|█████████▎                                                                                                 | 874/10000 [00:46<08:13, 18.49it/s]
+
+
+
+ 10%|██████████▌                                                                                                | 986/10000 [00:53<08:10, 18.36it/s]
+
+ 11%|███████████▏                                                                                              | 1057/10000 [00:56<08:02, 18.55it/s]
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 259, in <module>
+    train()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 241, in train
+    trainer.run()
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/trainer.py", line 100, in run
+    self.optimizer.step()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/optim/optimizer.py", line 381, in wrapper
+    for pre_hook in chain(_global_optimizer_pre_hooks.values(), self._optimizer_step_pre_hooks.values()):
+KeyboardInterrupt

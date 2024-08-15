@@ -1,0 +1,36 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.set_seed to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.set_seed` for environment variables or `env.get_wrapper_attr('set_seed')` that will search the reminding wrappers.
+  logger.warn(
+  0%|                                                                                                                     | 0/10000 [00:01<?, ?it/s]
+multiprocessing.pool.RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 140, in calc_loss_on_episode
+    action, action_log_prob, critic_output = pick_action_and_get_critic_values(model.actor, model.critic, state, config)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 176, in pick_action_and_get_critic_values
+    actions_log_prob = action_distribution.log_prob(torch.Tensor([action], device=config.device)).to(config.device)
+RuntimeError: legacy constructor expects device type: cpu but device type: cuda was passed
+"""
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 173, in <module>
+    main()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 165, in main
+    train_tasks = generate_histories(generation_config, generator_config, train_tasks)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 60, in generate_histories
+    curr_history = generator.train(config=generator_config, environment=copy.deepcopy(environment))
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 120, in train
+    model, histories = train(config, environment)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 239, in train
+    parallel_results = pool.map(calc_loss_on_episode, args)
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 774, in get
+    raise self._value
+RuntimeError: legacy constructor expects device type: cpu but device type: cuda was passed

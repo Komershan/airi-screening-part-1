@@ -1,0 +1,88 @@
+2024-08-15 09:00:17,670 INFO    StreamThr :5122 [internal.py:wandb_internal():85] W&B internal server running at pid: 5122, started at: 2024-08-15 09:00:17.670057
+2024-08-15 09:00:17,671 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: status
+2024-08-15 09:00:17,672 INFO    WriterThread:5122 [datastore.py:open_for_write():87] open: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240815_090017-20c0060b-8c73-48dc-b96d-27f43f49b607/run-20c0060b-8c73-48dc-b96d-27f43f49b607.wandb
+2024-08-15 09:00:17,672 DEBUG   SenderThread:5122 [sender.py:send():391] send: header
+2024-08-15 09:00:17,676 DEBUG   SenderThread:5122 [sender.py:send():391] send: run
+2024-08-15 09:00:18,315 INFO    SenderThread:5122 [dir_watcher.py:__init__():211] watching files in: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240815_090017-20c0060b-8c73-48dc-b96d-27f43f49b607/files
+2024-08-15 09:00:18,316 INFO    SenderThread:5122 [sender.py:_start_run_threads():1200] run started: 20c0060b-8c73-48dc-b96d-27f43f49b607 with start time 1723701617.670645
+2024-08-15 09:00:18,318 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: check_version
+2024-08-15 09:00:18,318 DEBUG   SenderThread:5122 [sender.py:send_request():418] send_request: check_version
+2024-08-15 09:00:18,801 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: run_start
+2024-08-15 09:00:18,812 ERROR   HandlerThread:5122 [gpu.py:is_available():381] Error initializing NVML: Driver Not Loaded
+2024-08-15 09:00:18,813 DEBUG   HandlerThread:5122 [system_info.py:__init__():26] System info init
+2024-08-15 09:00:18,813 DEBUG   HandlerThread:5122 [system_info.py:__init__():41] System info init done
+2024-08-15 09:00:18,813 INFO    HandlerThread:5122 [system_monitor.py:start():194] Starting system monitor
+2024-08-15 09:00:18,813 INFO    SystemMonitor:5122 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-15 09:00:18,813 INFO    HandlerThread:5122 [system_monitor.py:probe():214] Collecting system info
+2024-08-15 09:00:18,813 INFO    SystemMonitor:5122 [interfaces.py:start():188] Started cpu monitoring
+2024-08-15 09:00:18,813 INFO    SystemMonitor:5122 [interfaces.py:start():188] Started disk monitoring
+2024-08-15 09:00:18,814 INFO    SystemMonitor:5122 [interfaces.py:start():188] Started memory monitoring
+2024-08-15 09:00:18,814 INFO    SystemMonitor:5122 [interfaces.py:start():188] Started network monitoring
+2024-08-15 09:00:18,823 DEBUG   HandlerThread:5122 [system_info.py:probe():152] Probing system
+2024-08-15 09:00:18,824 DEBUG   HandlerThread:5122 [system_info.py:_probe_git():137] Probing git
+2024-08-15 09:00:18,831 DEBUG   HandlerThread:5122 [system_info.py:_probe_git():145] Probing git done
+2024-08-15 09:00:18,831 DEBUG   HandlerThread:5122 [system_info.py:probe():200] Probing system done
+2024-08-15 09:00:18,831 DEBUG   HandlerThread:5122 [system_monitor.py:probe():223] {'os': 'Linux-6.8.0-40-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2024-08-15T06:00:18.823147', 'startedAt': '2024-08-15T06:00:17.656797', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py', 'codePathLocal': 'scripts/data_generation.py', 'codePath': 'scripts/data_generation.py', 'git': {'remote': 'git@github.com:Komershan/airi-screening-part-1.git', 'commit': '6f26fc62997c0c9594e668d7836b807c69839d07'}, 'email': 'derevyagin102@mail.ru', 'root': '/home/aaderevyagin/airi_final/airi-screening-part-1', 'host': 'aaderevyagin-OMEN-by-HP-Laptop-16-c0xxx', 'username': 'aaderevyagin', 'executable': '/home/aaderevyagin/airi_final/venv/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 4062.8524375, 'min': 400.0, 'max': 4463.0}, 'cpu_freq_per_core': [{'current': 4141.975, 'min': 400.0, 'max': 4463.0}, {'current': 4158.814, 'min': 400.0, 'max': 4463.0}, {'current': 2918.598, 'min': 400.0, 'max': 4463.0}, {'current': 4141.957, 'min': 400.0, 'max': 4463.0}, {'current': 4141.988, 'min': 400.0, 'max': 4463.0}, {'current': 3415.992, 'min': 400.0, 'max': 4463.0}, {'current': 4142.037, 'min': 400.0, 'max': 4463.0}, {'current': 4142.004, 'min': 400.0, 'max': 4463.0}, {'current': 4161.52, 'min': 400.0, 'max': 4463.0}, {'current': 3296.817, 'min': 400.0, 'max': 4463.0}, {'current': 3300.075, 'min': 400.0, 'max': 4463.0}, {'current': 3305.267, 'min': 400.0, 'max': 4463.0}, {'current': 4141.988, 'min': 400.0, 'max': 4463.0}, {'current': 4142.095, 'min': 400.0, 'max': 4463.0}, {'current': 4117.631, 'min': 400.0, 'max': 4463.0}, {'current': 4117.66, 'min': 400.0, 'max': 4463.0}], 'disk': {'/': {'total': 937.3305015563965, 'used': 228.79874801635742}}, 'memory': {'total': 14.97054672241211}}
+2024-08-15 09:00:18,831 INFO    HandlerThread:5122 [system_monitor.py:probe():224] Finished collecting system info
+2024-08-15 09:00:18,831 INFO    HandlerThread:5122 [system_monitor.py:probe():227] Publishing system info
+2024-08-15 09:00:18,831 INFO    HandlerThread:5122 [system_monitor.py:probe():229] Finished publishing system info
+2024-08-15 09:00:18,834 DEBUG   SenderThread:5122 [sender.py:send():391] send: files
+2024-08-15 09:00:18,834 INFO    SenderThread:5122 [sender.py:_save_file():1466] saving file wandb-metadata.json with policy now
+2024-08-15 09:00:18,884 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: python_packages
+2024-08-15 09:00:18,884 DEBUG   SenderThread:5122 [sender.py:send_request():418] send_request: python_packages
+2024-08-15 09:00:18,925 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-15 09:00:18,925 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:18,926 DEBUG   SenderThread:5122 [sender.py:send_request():418] send_request: stop_status
+2024-08-15 09:00:19,317 INFO    Thread-12 :5122 [dir_watcher.py:_on_file_created():271] file/dir created: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240815_090017-20c0060b-8c73-48dc-b96d-27f43f49b607/files/wandb-metadata.json
+2024-08-15 09:00:19,317 INFO    Thread-12 :5122 [dir_watcher.py:_on_file_created():271] file/dir created: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240815_090017-20c0060b-8c73-48dc-b96d-27f43f49b607/files/requirements.txt
+2024-08-15 09:00:19,427 DEBUG   SenderThread:5122 [sender.py:send():391] send: telemetry
+2024-08-15 09:00:19,428 DEBUG   SenderThread:5122 [sender.py:send():391] send: telemetry
+2024-08-15 09:00:19,812 INFO    wandb-upload_0:5122 [upload_job.py:push():130] Uploaded file /tmp/tmprdd95ywpwandb/0hd26gbf-wandb-metadata.json
+2024-08-15 09:00:19,951 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:20,336 INFO    Thread-12 :5122 [dir_watcher.py:_on_file_created():271] file/dir created: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240815_090017-20c0060b-8c73-48dc-b96d-27f43f49b607/files/output.log
+2024-08-15 09:00:20,921 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:21,922 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:22,336 INFO    Thread-12 :5122 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240815_090017-20c0060b-8c73-48dc-b96d-27f43f49b607/files/output.log
+2024-08-15 09:00:22,921 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:23,052 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: status_report
+2024-08-15 09:00:23,924 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:24,922 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:25,925 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:26,929 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:27,922 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:28,901 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: status_report
+2024-08-15 09:00:28,930 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:29,942 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:30,972 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:31,975 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:32,989 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:33,924 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: status_report
+2024-08-15 09:00:33,966 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-15 09:00:33,976 DEBUG   SenderThread:5122 [sender.py:send_request():418] send_request: stop_status
+2024-08-15 09:00:34,019 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:35,025 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:36,020 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:37,019 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:38,030 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:39,028 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:39,915 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: status_report
+2024-08-15 09:00:40,028 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:41,030 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:42,029 DEBUG   HandlerThread:5122 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-15 09:00:42,755 WARNING StreamThr :5122 [internal.py:is_dead():413] Internal process exiting, parent pid 5088 disappeared
+2024-08-15 09:00:42,755 ERROR   StreamThr :5122 [internal.py:wandb_internal():151] Internal process shutdown.
+2024-08-15 09:00:42,887 INFO    memory    :5122 [interfaces.py:monitor():138] Process proc.memory.rssMB has exited.
+2024-08-15 09:00:42,890 DEBUG   SystemMonitor:5122 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-15 09:00:42,890 DEBUG   SystemMonitor:5122 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-15 09:00:42,890 DEBUG   SystemMonitor:5122 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-15 09:00:42,899 INFO    HandlerThread:5122 [handler.py:finish():882] shutting down handler
+2024-08-15 09:00:42,900 INFO    WriterThread:5122 [datastore.py:close():296] close: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240815_090017-20c0060b-8c73-48dc-b96d-27f43f49b607/run-20c0060b-8c73-48dc-b96d-27f43f49b607.wandb
+2024-08-15 09:00:42,901 INFO    HandlerThread:5122 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-15 09:00:42,901 DEBUG   SenderThread:5122 [sender.py:send():391] send: stats
+2024-08-15 09:00:42,901 INFO    HandlerThread:5122 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-15 09:00:42,903 INFO    SenderThread:5122 [sender.py:finish():1631] shutting down sender
+2024-08-15 09:00:42,904 INFO    HandlerThread:5122 [interfaces.py:finish():200] Joined disk monitor
+2024-08-15 09:00:42,914 INFO    HandlerThread:5122 [interfaces.py:finish():200] Joined memory monitor
+2024-08-15 09:00:42,914 INFO    HandlerThread:5122 [interfaces.py:finish():200] Joined network monitor
+2024-08-15 09:00:43,498 INFO    SenderThread:5122 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-08-15 09:00:44,129 INFO    MainThread:5122 [internal.py:handle_exit():75] Internal process exited

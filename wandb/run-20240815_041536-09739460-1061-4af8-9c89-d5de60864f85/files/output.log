@@ -1,0 +1,18 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.set_seed to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.set_seed` for environment variables or `env.get_wrapper_attr('set_seed')` that will search the reminding wrappers.
+  logger.warn(
+  0%|                                                                                                                      | 0/5000 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 173, in <module>
+    main()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 165, in main
+    train_tasks = generate_histories(generation_config, generator_config, train_tasks)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 60, in generate_histories
+    curr_history = generator.train(config=generator_config, environment=copy.deepcopy(environment))
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 120, in train
+    model, histories = train(config, environment)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 243, in train
+    stream_histories[index] = np.concatenate(stream_histories[index], history, axis=1)
+TypeError: concatenate() got multiple values for argument 'axis'

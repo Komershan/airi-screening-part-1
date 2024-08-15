@@ -1,5 +1,9 @@
-# This code is taken from corl-team/toy-meta-gym
-# https://github.com/corl-team/toy-meta-gym/tree/main
+'''
+Basically, this code is taken from corl-team/toy-meta-gym
+https://github.com/corl-team/toy-meta-gym/tree/main
+
+But I added mapping and several methods for environment saving
+'''
 import gymnasium as gym
 import numpy as np
 from gymnasium import spaces
@@ -14,11 +18,23 @@ def all_goals(grid_size):
 class DarkRoom(gym.Env):
     metadata = {"render_modes": ["rgb_array"], "render_fps": 1}
 
-    def __init__(self, size=9, goal=None, random_start=True, terminate_on_goal=False, render_mode="rgb_array", goal_only_once=False):
+    def __init__(
+        self,
+        size=9,
+        goal=None,
+        random_start=True,
+        terminate_on_goal=False,
+        render_mode="rgb_array",
+        goal_only_once=False,
+        seed=69,
+    ):
         self.size = size
         self.agent_pos = None
         self.goal_only_once = goal_only_once
         self.was_terminated = False
+        self.seed = seed
+        # I also fix random generation in order to differentiate tasks
+        self.rng = Generator(PCG64(seed=self.seed))
 
         if goal is not None:
             self.goal_pos = np.asarray(goal)
@@ -42,59 +58,70 @@ class DarkRoom(gym.Env):
         self.render_mode = render_mode
         self.random_start = random_start
 
+        # I need to have mapping_dict in order to execute environment saving
+        # In this dict I map class fields to data types for saving in HDF5
         self.mapping_dict = {
-            'size': 'int',
-            'goal_pos': 'int',
-            'agent_pos': 'int',
-            'seed': 'int',
-            'random_start': 'bool',
-            'terminate_on_goal': 'bool',
-            'goal_only_once': 'bool'
+            "size": "int",
+            "goal_pos": "array",
+            "agent_pos": "array",
+            "seed": "int",
+            "random_start": "bool",
+            "terminate_on_goal": "bool",
+            "goal_only_once": "bool",
         }
 
     def generate_pos(self):
-        return self.np_random.integers(0, self.size, size=2).astype(np.float32)
+        return self.rng.integers(0, self.size, size=2).astype(np.float32)
 
     def generate_goal(self):
-        return self.np_random.integers(0, self.size, size=2)
-    
+        return self.rng.integers(0, self.size, size=2)
+
     def get_action_space_size(self):
         return 5
-    
+
     def set_seed(self, seed=None) -> None:
         self.seed = seed
+        self.rng = Generator(PCG64(seed=self.seed))
 
     def pos_to_state(self, pos):
         return int(pos[0] * self.size + pos[1])
 
     def state_to_pos(self, state):
         return np.array(divmod(state, self.size))
-    
+
     def observation_to_int(self):
-        return self.agent_pos
-    
+        return self.pos_to_state(self.agent_pos)
+
     def get_params_dict(self):
-        return {key:value for key, value in self.__dict__.items() if not key.startswith('__') and not callable(key)}
-    
+        return {
+            key: value
+            for key, value in self.__dict__.items()
+            if not key.startswith("__") and not callable(key)
+        }
+
     def get_mapping_dict(self):
         return self.mapping_dict
-    
+
     def load_from_dict(self, dict):
         self.__dict__.update(dict)
         self.rng = Generator(PCG64(seed=self.seed))
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed, options=options)
-        self.was_terminated = False
+
         if self.random_start:
             self.agent_pos = self.generate_pos()
         else:
             self.agent_pos = np.array(self.center_pos, dtype=np.float32)
 
+        self.was_terminated = False
+
         return self.pos_to_state(self.agent_pos), {}
 
     def step(self, action):
-        self.agent_pos = np.clip(self.agent_pos + self.action_to_direction[action], 0, self.size - 1)
+        self.agent_pos = np.clip(
+            self.agent_pos + self.action_to_direction[action], 0, self.size - 1
+        )
 
         reward = 1.0 if np.array_equal(self.agent_pos, self.goal_pos) else 0.0
         if reward == 1.0:
@@ -108,7 +135,19 @@ class DarkRoom(gym.Env):
     def render(self):
         if self.render_mode == "rgb_array":
             # Create a grid representing the dark room
-            grid = np.full((self.size, self.size, 3), fill_value=(255, 255, 255), dtype=np.uint8)
+            grid = np.full(
+                (self.size, self.size, 3), fill_value=(255, 255, 255), dtype=np.uint8
+            )
             grid[self.goal_pos[0], self.goal_pos[1]] = (255, 0, 0)
             grid[int(self.agent_pos[0]), int(self.agent_pos[1])] = (0, 255, 0)
             return grid
+
+    def __eq__(self, other):
+        if type(other) is type(self):
+            is_equal = True
+            is_equal = is_equal and (self.goal_pos == other.goal_pos)
+            is_equal = is_equal and (self.seed == other.seed)
+
+            return is_equal
+
+        return False

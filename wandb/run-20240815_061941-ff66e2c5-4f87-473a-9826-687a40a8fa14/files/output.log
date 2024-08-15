@@ -1,0 +1,34 @@
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.observation_to_int to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.observation_to_int` for environment variables or `env.get_wrapper_attr('observation_to_int')` that will search the reminding wrappers.
+  logger.warn(
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 148, in <module>
+    benchmark()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 140, in benchmark
+    total_reward_model = run_env(checkpoint_model, config, agent_name=f"{checkpoint}", sampled_task=sampled_task, finish=False)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 56, in run_env
+    action = model.get_action(environment.observation_to_int())
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/AD.py", line 195, in get_action
+    logits, loss = self.forward(torch.LongTensor([self.history[-(self.config.block_size - 2):]]))
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/AD.py", line 170, in forward
+    x = block(x)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/utils.py", line 180, in forward
+    x = x + self.attn(self.ln_1(x))
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/utils.py", line 145, in forward
+    q, k ,v  = self.c_attn(x).split(self.n_embd, dim=2)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt

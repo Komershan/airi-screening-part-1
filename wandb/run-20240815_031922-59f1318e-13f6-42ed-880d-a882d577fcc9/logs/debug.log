@@ -1,0 +1,39 @@
+2024-08-15 03:19:22,033 INFO    MainThread:190796 [wandb_setup.py:_flush():76] Current SDK version is 0.17.6
+2024-08-15 03:19:22,033 INFO    MainThread:190796 [wandb_setup.py:_flush():76] Configure stats pid to 190796
+2024-08-15 03:19:22,033 INFO    MainThread:190796 [wandb_setup.py:_flush():76] Loading settings from /home/aaderevyagin/.config/wandb/settings
+2024-08-15 03:19:22,033 INFO    MainThread:190796 [wandb_setup.py:_flush():76] Loading settings from /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/settings
+2024-08-15 03:19:22,033 INFO    MainThread:190796 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-08-15 03:19:22,034 INFO    MainThread:190796 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-08-15 03:19:22,034 INFO    MainThread:190796 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'scripts/data_generation.py', 'program_abspath': '/home/aaderevyagin/airi_final/airi-screening-part-1/scripts/data_generation.py', 'program': '/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py'}
+2024-08-15 03:19:22,034 INFO    MainThread:190796 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-08-15 03:19:22,034 INFO    MainThread:190796 [wandb_init.py:_log_setup():521] Logging user logs to /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240815_031922-59f1318e-13f6-42ed-880d-a882d577fcc9/logs/debug.log
+2024-08-15 03:19:22,034 INFO    MainThread:190796 [wandb_init.py:_log_setup():522] Logging internal logs to /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240815_031922-59f1318e-13f6-42ed-880d-a882d577fcc9/logs/debug-internal.log
+2024-08-15 03:19:22,034 INFO    MainThread:190796 [wandb_init.py:init():559] calling init triggers
+2024-08-15 03:19:22,034 INFO    MainThread:190796 [wandb_init.py:init():566] wandb.init called with sweep_config: {}
+config: {'project': 'Algorithm-Distillation-Training-v5', 'group': 'Baselines', 'name': 'A2C-a6efafa8', 'checkpoints_path': './checkpoints/darkroom/a2c/A2C-a6efafa8', 'environment_name': 'Dark-Room-v0', 'seed': 69, 'deterministic_torch': True, 'normalize_rewards': True, 'save_checkpoints': True, 'device': 'cpu', 'num_inputs': 1, 'num_actions': 5, 'num_episodes_for_actor': 3, 'gradient_clipping_norm': 5.0, 'num_actors': 10, 'discount': 0.99, 'mlp_layers_count': 3, 'hidden_dimension': 128, 'beta_1': 0.9, 'beta_2': 0.999, 'lr': 0.0001, 'epsilon': 0.01, 'log_step': 20, 'episode_length': 20, 'single_stream': False, 'save_format': 'uint8'}
+2024-08-15 03:19:22,034 INFO    MainThread:190796 [wandb_init.py:init():609] starting backend
+2024-08-15 03:19:22,034 INFO    MainThread:190796 [wandb_init.py:init():613] setting up manager
+2024-08-15 03:19:22,035 INFO    MainThread:190796 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-08-15 03:19:22,036 INFO    MainThread:190796 [wandb_init.py:init():621] backend started and connected
+2024-08-15 03:19:22,038 INFO    MainThread:190796 [wandb_init.py:init():716] updated telemetry
+2024-08-15 03:19:22,042 INFO    MainThread:190796 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2024-08-15 03:19:22,661 INFO    MainThread:190796 [wandb_run.py:_on_init():2438] communicating current version
+2024-08-15 03:19:22,925 WARNING MainThread:190796 [wandb_init.py:init():1181] interrupted
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1177, in init
+    return wi.init()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 798, in init
+    run._on_init()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2442, in _on_init
+    version_result = version_handle.wait(timeout=30)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/wandb/sdk/lib/mailbox.py", line 283, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/wandb/sdk/lib/mailbox.py", line 130, in _get_and_clear
+    if self._wait(timeout=timeout):
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/wandb/sdk/lib/mailbox.py", line 126, in _wait
+    return self._event.wait(timeout=timeout)
+  File "/usr/lib/python3.10/threading.py", line 607, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/lib/python3.10/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

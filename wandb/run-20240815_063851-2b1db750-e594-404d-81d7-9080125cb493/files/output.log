@@ -1,0 +1,27 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+  0%|                                                                                                                     | 0/10000 [00:00<?, ?it/s]/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+  0%|                                                                                                            | 10/10000 [00:00<11:01, 15.10it/s]
+number of parameters: 25.32M
+running on device cuda
+
+
+  1%|▉                                                                                                           | 88/10000 [00:04<08:33, 19.32it/s]
+
+
+  2%|█▊                                                                                                         | 166/10000 [00:08<08:31, 19.24it/s]
+
+
+  3%|██▋                                                                                                        | 257/10000 [00:13<08:40, 18.71it/s]
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 259, in <module>
+    train()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 241, in train
+    trainer.run()
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/trainer.py", line 90, in run
+    batch = [t.to(self.device) for t in batch]
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/trainer.py", line 90, in <listcomp>
+    batch = [t.to(self.device) for t in batch]
+KeyboardInterrupt

@@ -1,0 +1,39 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.set_seed to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.set_seed` for environment variables or `env.get_wrapper_attr('set_seed')` that will search the reminding wrappers.
+  logger.warn(
+  0%|                                                                                                                     | 0/20000 [00:00<?, ?it/s]
+[40  1  0 31  1  0 22  1  0 13  3  0 22  1  0 13  2  0 14  1  1  5  3  0
+ 14  1  1  5  0  1  5  0  1  5  1  1  5  1  1  5  2  0  6  0  0  6  1  0
+  6  1  0  6  1  0  6  0  0  6  4  1]
+[40  1  0 31  2  0 32  3  0 41  1  0 32  4  0 31  2  0 32  3  0 41  1  0
+ 32  3  0 41  3  0 50  1  0 41  1  0 32  1  0 23  3  0 32  2  0 33  2  0
+ 34  3  0 43  3  0 52  1  0 43  1  0]
+[40  1  0 31  3  0 40  2  0 41  2  0 42  1  0 33  2  0 34  2  0 35  3  0
+ 44  2  0 44  2  0 44  2  0 44  2  0 44  3  0 53  2  0 53  3  0 62  2  0
+  0%|                                                                                                           | 3/20000 [00:01<3:36:53,  1.54it/s]
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 197, in <module>
+    main()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 186, in main
+    train_tasks = generate_histories(
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 63, in generate_histories
+    curr_history = generator.train_from_model(
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 132, in train_from_model
+    model, histories = train(config, environment)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 310, in train
+    parallel_results = pool.map(calc_loss_on_episode, args)
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 768, in get
+    self.wait(timeout)
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 765, in wait
+    self._event.wait(timeout)
+  File "/usr/lib/python3.10/threading.py", line 607, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt

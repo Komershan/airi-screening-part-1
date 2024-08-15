@@ -1,0 +1,28 @@
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.observation_to_int to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.observation_to_int` for environment variables or `env.get_wrapper_attr('observation_to_int')` that will search the reminding wrappers.
+  logger.warn(
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 146, in <module>
+    benchmark()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 132, in benchmark
+    total_reward_baseline = run_env(baseline, config, agent_name=f"Baseline ({config.baseline})", sampled_task=sampled_task)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py", line 56, in run_env
+    action = model.get_action(environment.observation_to_int())
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 126, in get_action
+    actor_output = self.actor(torch.Tensor([observation]))
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 1545, in forward
+    return F.softmax(input, self.dim, _stacklevel=5)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/functional.py", line 1885, in softmax
+    ret = input.softmax(dim)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)

@@ -1,0 +1,44 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.set_seed to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.set_seed` for environment variables or `env.get_wrapper_attr('set_seed')` that will search the reminding wrappers.
+  logger.warn(
+  0%|                                                                                                                     | 0/20000 [00:01<?, ?it/s]
+multiprocessing.pool.RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 167, in calc_loss_on_episode
+    action, action_log_prob, critic_output = pick_action_and_get_critic_values(
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 214, in pick_action_and_get_critic_values
+    actions_log_prob = action_distribution.log_prob(
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/distributions/categorical.py", line 137, in log_prob
+    self._validate_sample(value)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/distributions/distribution.py", line 312, in _validate_sample
+    raise ValueError(
+ValueError: Expected value argument (Tensor of shape (1,)) to be within the support (IntegerInterval(lower_bound=0, upper_bound=4)) of the distribution Categorical(probs: torch.Size([1, 5])), but found invalid values:
+tensor([5.])
+"""
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 197, in <module>
+    main()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 186, in main
+    train_tasks = generate_histories(
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/data_generation.py", line 63, in generate_histories
+    curr_history = generator.train_from_model(
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 132, in train_from_model
+    model, histories = train(config, environment)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/generation_baselines/a2c.py", line 302, in train
+    parallel_results = pool.map(calc_loss_on_episode, args)
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 774, in get
+    raise self._value
+ValueError: Expected value argument (Tensor of shape (1,)) to be within the support (IntegerInterval(lower_bound=0, upper_bound=4)) of the distribution Categorical(probs: torch.Size([1, 5])), but found invalid values:
+tensor([5.])

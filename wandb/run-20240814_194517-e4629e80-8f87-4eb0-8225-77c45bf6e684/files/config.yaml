@@ -1,0 +1,70 @@
+wandb_version: 1
+
+project:
+  desc: null
+  value: Final-mb-run-bandits-odd
+group:
+  desc: null
+  value: Test-Group
+name:
+  desc: null
+  value: Baseline (UCB)
+baseline:
+  desc: null
+  value: UCB
+baseline_checkpoint:
+  desc: null
+  value: null
+checkpoints_dir:
+  desc: null
+  value: ./checkpoints/bandits
+test_tasks_filename:
+  desc: null
+  value: ./data/bandits/test_tasks_odd.hdf5
+episode_size:
+  desc: null
+  value: 100
+num_episodes:
+  desc: null
+  value: 10
+discount:
+  desc: null
+  value: 0.99
+eval_seed:
+  desc: null
+  value: 32
+num_eval_seeds:
+  desc: null
+  value: 10
+device:
+  desc: null
+  value: cuda
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.12
+    cli_version: 0.17.6
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1723653917
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 2
+      - 13
+      - 14
+      - 16
+      - 23
+      4: 3.10.12
+      5: 0.17.6
+      8:
+      - 5
+      10:
+      - 3
+      13: linux-x86_64
