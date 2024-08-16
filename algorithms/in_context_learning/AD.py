@@ -255,7 +255,6 @@ class AD(nn.Module):
         )
         logits = logits[:, -1, :]
         action = torch.argmax(logits).item()
-        print(logits)
         if self.config.use_compressed_context:
             action = torch.argmax(logits[:, -1]).item()
         self.history.append(action)
