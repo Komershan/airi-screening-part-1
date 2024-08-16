@@ -6,7 +6,7 @@
 
 # Репорт и вторые части отбора
 
-Вы можете найти тут: https://www.notion.so/shorties-3819414ad36c4f98b86d8e1f26fb304b?pvs=4.
+Вы можете найти тут: [https://www.notion.so/shorties-3819414ad36c4f98b86d8e1f26fb304b?pvs=4](https://midnight-dolomite-aaa.notion.site/shorties-3819414ad36c4f98b86d8e1f26fb304b?pvs=4).
 
 # О коде
 
