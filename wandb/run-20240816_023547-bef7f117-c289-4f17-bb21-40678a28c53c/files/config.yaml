@@ -1,0 +1,117 @@
+wandb_version: 1
+
+project:
+  desc: null
+  value: Algorithm-Distillation
+group:
+  desc: null
+  value: In-Context-Algorithms
+name:
+  desc: null
+  value: Algorithm-Distillation-GPT-f284ed7a
+dataset_path:
+  desc: null
+  value: ./compress_context_dataset.hdf5
+checkpoints_path:
+  desc: null
+  value: ./checkpoints/bandits/Algorithm-Distillation-GPT-f284ed7a
+from_checkpoint:
+  desc: null
+  value: null
+seed:
+  desc: null
+  value: 42
+deterministic_torch:
+  desc: null
+  value: true
+device:
+  desc: null
+  value: cuda
+n_layer:
+  desc: null
+  value: 8
+n_head:
+  desc: null
+  value: 16
+n_embd:
+  desc: null
+  value: 512
+embd_pdrop:
+  desc: null
+  value: 0.1
+resid_pdrop:
+  desc: null
+  value: 0.3
+attn_pdrop:
+  desc: null
+  value: 0.5
+mask_prob:
+  desc: null
+  value: 0.3
+online_iterations:
+  desc: null
+  value: 100
+batch_size:
+  desc: null
+  value: 8
+eval_frequency:
+  desc: null
+  value: 1000
+n_test_episodes:
+  desc: null
+  value: 10
+normalize_reward:
+  desc: null
+  value: false
+learning_rate:
+  desc: null
+  value: 0.003
+max_iters:
+  desc: null
+  value: 2000
+num_workers:
+  desc: null
+  value: 0
+vocab_size:
+  desc: null
+  value: 10
+block_size:
+  desc: null
+  value: 420
+use_compressed_context:
+  desc: null
+  value: true
+compressed_context_size:
+  desc: null
+  value: 20
+compressed_context_count:
+  desc: null
+  value: 2
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.12
+    cli_version: 0.17.6
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1723764947
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 13
+      - 14
+      - 16
+      - 23
+      4: 3.10.12
+      5: 0.17.6
+      8:
+      - 5
+      10:
+      - 3
+      13: linux-x86_64

@@ -19,7 +19,7 @@ from utils.utils import set_seed
 @dataclass
 class GenerationConfig:
     # Here we specify generator name for generating history
-    generator_name: str = "A2C"
+    generator_name: str = "UCB"
     # You can also provide generator_specs if you want to. 
     # Default parameters are stored in following TrainConfigs in definition files
     generator_specs = {}
@@ -32,25 +32,29 @@ class GenerationConfig:
     num_episodes: int = 10
 
     # Here we specify train and test environments names.
-    train_env: str = "Dark-Room-v0"
-    test_env: str = "Dark-Room-v0"
+    train_env: str = "bandits-odd-v0"
+    test_env: str = "bandits-odd-v0"
 
     # Here we provide saving paths for dataset, train tasks and test tasks
-    dataset_name: str = "dark_room_dataset.hdf5"
-    train_tasks_filename: str = "./data/darkroom/dark_room_train.hdf5"
-    test_tasks_filename: str = "./data/darkroom/dark_room_test.hdf5"
+    dataset_name: str = "compress_context_dataset.hdf5"
+    train_tasks_filename: str = "./data/bandits/train_tasks_odd.hdf5"
+    test_tasks_filename: str = "./data/bandits/test_tasks_odd.hdf5"
 
     # You can specify load_train = True if you want to generate dataset using same train tasks
     # or generate different test tasks based on train_tasks
-    load_train: bool = False
+    load_train: bool = True
     # You must set this to false it if you want to generate expert trajectories instead of learning histories
     learning_histories: bool = True
     # You can set it to false if you don't want to generate dataset
     generate_dataset: bool = True
 
     # This is a dataset parameter. You can check it here: ./utils/dataset_utils.py
-    resize_history: Optional[int] = 40
+    resize_history: Optional[int] = 150
     filtering_window: Optional[int] = None
+    
+    use_compressed_context: bool = True
+    compressed_context_size: int = 20
+    compressed_context_count: int = 2
 
     seed: int = 11
 
@@ -62,12 +66,6 @@ def generate_histories(
     model = GENERATOR_CLASS[config.generator_name](generator_config)
 
     histories = []
-
-    # Init dataset for storing histories
-    dataset = HistoriesDataset(
-        vocab_size=max(train_tasks[0].get_action_space_size(), train_tasks[0].get_observation_space_size()),
-        resize_history=config.resize_history,
-    )
 
     for environment in train_tasks:
         # Train algorithm and get history
@@ -114,10 +112,18 @@ def generate_histories(
         dataset.write(config.dataset_name)
 
     dataset = HistoriesDataset(
-        vocab_size=train_tasks[0].get_action_space_size(),
+        vocab_size=max(train_tasks[0].get_action_space_size(), train_tasks[0].get_observation_space_size()),
         resize_history=config.resize_history,
     )
 
+    if config.use_compressed_context:
+        dataset = HistoriesDataset(
+            vocab_size=max(train_tasks[0].get_action_space_size(), train_tasks[0].get_observation_space_size()),
+            resize_history=config.resize_history,
+            episode_size=config.episode_size,
+            compress_context_count=config.compressed_context_count,
+            compress_context_size=config.compressed_context_size
+        )
     # If we want to, we can apply filtering window similar to Gato
     if not (config.filtering_window is None):
         max_index = 0

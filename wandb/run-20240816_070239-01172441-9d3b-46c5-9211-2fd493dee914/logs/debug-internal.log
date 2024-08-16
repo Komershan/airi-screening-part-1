@@ -1,0 +1,373 @@
+2024-08-16 07:02:40,606 INFO    StreamThr :46215 [internal.py:wandb_internal():85] W&B internal server running at pid: 46215, started at: 2024-08-16 07:02:40.606043
+2024-08-16 07:02:40,607 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status
+2024-08-16 07:02:40,609 INFO    WriterThread:46215 [datastore.py:open_for_write():87] open: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/run-01172441-9d3b-46c5-9211-2fd493dee914.wandb
+2024-08-16 07:02:40,609 DEBUG   SenderThread:46215 [sender.py:send():391] send: header
+2024-08-16 07:02:40,609 DEBUG   SenderThread:46215 [sender.py:send():391] send: run
+2024-08-16 07:02:41,351 INFO    SenderThread:46215 [dir_watcher.py:__init__():211] watching files in: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files
+2024-08-16 07:02:41,351 INFO    SenderThread:46215 [sender.py:_start_run_threads():1200] run started: 01172441-9d3b-46c5-9211-2fd493dee914 with start time 1723780959.710419
+2024-08-16 07:02:41,359 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: check_version
+2024-08-16 07:02:41,359 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: check_version
+2024-08-16 07:02:41,650 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: run_start
+2024-08-16 07:02:41,657 ERROR   HandlerThread:46215 [gpu.py:is_available():381] Error initializing NVML: Driver Not Loaded
+2024-08-16 07:02:41,658 DEBUG   HandlerThread:46215 [system_info.py:__init__():26] System info init
+2024-08-16 07:02:41,658 DEBUG   HandlerThread:46215 [system_info.py:__init__():41] System info init done
+2024-08-16 07:02:41,658 INFO    HandlerThread:46215 [system_monitor.py:start():194] Starting system monitor
+2024-08-16 07:02:41,658 INFO    SystemMonitor:46215 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-16 07:02:41,658 INFO    HandlerThread:46215 [system_monitor.py:probe():214] Collecting system info
+2024-08-16 07:02:41,658 INFO    SystemMonitor:46215 [interfaces.py:start():188] Started cpu monitoring
+2024-08-16 07:02:41,659 INFO    SystemMonitor:46215 [interfaces.py:start():188] Started disk monitoring
+2024-08-16 07:02:41,659 INFO    SystemMonitor:46215 [interfaces.py:start():188] Started memory monitoring
+2024-08-16 07:02:41,661 INFO    SystemMonitor:46215 [interfaces.py:start():188] Started network monitoring
+2024-08-16 07:02:41,666 DEBUG   HandlerThread:46215 [system_info.py:probe():152] Probing system
+2024-08-16 07:02:41,667 DEBUG   HandlerThread:46215 [system_info.py:_probe_git():137] Probing git
+2024-08-16 07:02:41,671 DEBUG   HandlerThread:46215 [system_info.py:_probe_git():145] Probing git done
+2024-08-16 07:02:41,671 DEBUG   HandlerThread:46215 [system_info.py:probe():200] Probing system done
+2024-08-16 07:02:41,671 DEBUG   HandlerThread:46215 [system_monitor.py:probe():223] {'os': 'Linux-6.8.0-40-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2024-08-16T04:02:41.666948', 'startedAt': '2024-08-16T04:02:39.706496', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/aaderevyagin/airi_final/airi-screening-part-1/./scripts/compare_arena.py', 'codePathLocal': 'scripts/compare_arena.py', 'codePath': 'scripts/compare_arena.py', 'git': {'remote': 'git@github.com:Komershan/airi-screening-part-1.git', 'commit': '9bd04645b835810220e6c408b3d220101a158cc7'}, 'email': 'derevyagin102@mail.ru', 'root': '/home/aaderevyagin/airi_final/airi-screening-part-1', 'host': 'aaderevyagin-OMEN-by-HP-Laptop-16-c0xxx', 'username': 'aaderevyagin', 'executable': '/home/aaderevyagin/airi_final/venv/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 2930.456625, 'min': 400.0, 'max': 4463.0}, 'cpu_freq_per_core': [{'current': 3405.838, 'min': 400.0, 'max': 4463.0}, {'current': 3412.527, 'min': 400.0, 'max': 4463.0}, {'current': 4096.185, 'min': 400.0, 'max': 4463.0}, {'current': 400.0, 'min': 400.0, 'max': 4463.0}, {'current': 3629.202, 'min': 400.0, 'max': 4463.0}, {'current': 2635.193, 'min': 400.0, 'max': 4463.0}, {'current': 4263.639, 'min': 400.0, 'max': 4463.0}, {'current': 400.0, 'min': 400.0, 'max': 4463.0}, {'current': 3929.83, 'min': 400.0, 'max': 4463.0}, {'current': 3400.532, 'min': 400.0, 'max': 4463.0}, {'current': 4279.839, 'min': 400.0, 'max': 4463.0}, {'current': 3628.965, 'min': 400.0, 'max': 4463.0}, {'current': 3398.165, 'min': 400.0, 'max': 4463.0}, {'current': 400.0, 'min': 400.0, 'max': 4463.0}, {'current': 400.0, 'min': 400.0, 'max': 4463.0}, {'current': 3397.983, 'min': 400.0, 'max': 4463.0}], 'disk': {'/': {'total': 937.3305015563965, 'used': 231.1237564086914}}, 'memory': {'total': 14.970539093017578}}
+2024-08-16 07:02:41,672 INFO    HandlerThread:46215 [system_monitor.py:probe():224] Finished collecting system info
+2024-08-16 07:02:41,672 INFO    HandlerThread:46215 [system_monitor.py:probe():227] Publishing system info
+2024-08-16 07:02:41,672 INFO    HandlerThread:46215 [system_monitor.py:probe():229] Finished publishing system info
+2024-08-16 07:02:41,672 DEBUG   SenderThread:46215 [sender.py:send():391] send: files
+2024-08-16 07:02:41,672 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-metadata.json with policy now
+2024-08-16 07:02:41,708 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: python_packages
+2024-08-16 07:02:41,708 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: python_packages
+2024-08-16 07:02:41,749 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-16 07:02:41,750 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:41,750 DEBUG   SenderThread:46215 [sender.py:send():391] send: telemetry
+2024-08-16 07:02:41,751 DEBUG   SenderThread:46215 [sender.py:send():391] send: telemetry
+2024-08-16 07:02:41,751 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: stop_status
+2024-08-16 07:02:42,354 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_created():271] file/dir created: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-metadata.json
+2024-08-16 07:02:42,355 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_created():271] file/dir created: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/requirements.txt
+2024-08-16 07:02:42,356 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_created():271] file/dir created: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:02:42,670 INFO    wandb-upload_0:46215 [upload_job.py:push():130] Uploaded file /tmp/tmppgzmdnzgwandb/fn310wxi-wandb-metadata.json
+2024-08-16 07:02:42,710 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:43,710 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:44,352 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:02:44,716 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:45,665 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:02:45,711 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:46,353 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:02:46,710 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:47,711 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:48,354 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:02:48,711 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:49,418 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-16 07:02:49,419 DEBUG   SenderThread:46215 [sender.py:send():391] send: history
+2024-08-16 07:02:49,419 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: summary_record
+2024-08-16 07:02:49,420 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:02:49,712 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:50,356 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:02:50,356 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_created():271] file/dir created: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json
+2024-08-16 07:02:50,711 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:50,733 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:02:51,711 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:52,357 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:02:52,712 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:53,712 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:54,359 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:02:54,713 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:55,713 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:55,766 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:02:56,360 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:02:56,712 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-16 07:02:56,713 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: stop_status
+2024-08-16 07:02:56,716 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:57,132 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-16 07:02:57,133 DEBUG   SenderThread:46215 [sender.py:send():391] send: history
+2024-08-16 07:02:57,133 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: summary_record
+2024-08-16 07:02:57,134 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:02:57,360 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json
+2024-08-16 07:02:57,713 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:58,360 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:02:58,713 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:02:59,713 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:00,362 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:00,714 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:00,785 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:01,713 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:02,363 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:02,714 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:03,714 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:04,364 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:04,714 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:04,813 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-16 07:03:04,814 DEBUG   SenderThread:46215 [sender.py:send():391] send: history
+2024-08-16 07:03:04,815 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: summary_record
+2024-08-16 07:03:04,815 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:03:05,365 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json
+2024-08-16 07:03:05,714 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:05,815 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:06,365 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:06,714 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:07,715 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:08,366 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:08,715 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:09,716 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:10,716 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:10,893 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:11,373 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/config.yaml
+2024-08-16 07:03:11,374 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:11,710 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-16 07:03:11,711 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: stop_status
+2024-08-16 07:03:11,715 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:12,501 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-16 07:03:12,502 DEBUG   SenderThread:46215 [sender.py:send():391] send: history
+2024-08-16 07:03:12,502 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: summary_record
+2024-08-16 07:03:12,503 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:03:12,716 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:13,375 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:13,375 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json
+2024-08-16 07:03:13,716 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:14,717 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:15,376 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:15,716 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:16,264 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:16,717 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:17,378 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:17,717 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:18,717 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:19,379 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:19,717 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:20,717 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:21,139 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-16 07:03:21,140 DEBUG   SenderThread:46215 [sender.py:send():391] send: history
+2024-08-16 07:03:21,140 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: summary_record
+2024-08-16 07:03:21,141 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:03:21,295 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:21,380 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:21,381 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json
+2024-08-16 07:03:21,721 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:22,718 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:23,382 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:23,718 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:24,718 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:25,383 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:25,718 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:26,365 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:26,710 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-16 07:03:26,710 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: stop_status
+2024-08-16 07:03:26,719 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:27,385 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:27,719 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:28,718 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:28,844 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-16 07:03:28,845 DEBUG   SenderThread:46215 [sender.py:send():391] send: history
+2024-08-16 07:03:28,845 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: summary_record
+2024-08-16 07:03:28,846 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:03:29,386 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:29,387 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json
+2024-08-16 07:03:29,719 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:30,719 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:31,404 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:31,404 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:31,719 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:32,719 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:33,406 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:33,719 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:34,720 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:35,407 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:35,720 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:36,438 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:36,518 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-16 07:03:36,519 DEBUG   SenderThread:46215 [sender.py:send():391] send: history
+2024-08-16 07:03:36,520 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: summary_record
+2024-08-16 07:03:36,520 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:03:36,721 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:37,408 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:37,408 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json
+2024-08-16 07:03:37,721 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:38,721 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:39,409 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:39,722 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:40,722 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:41,410 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:41,505 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:41,661 DEBUG   SystemMonitor:46215 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-16 07:03:41,662 DEBUG   SenderThread:46215 [sender.py:send():391] send: stats
+2024-08-16 07:03:41,710 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-16 07:03:41,711 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: stop_status
+2024-08-16 07:03:41,722 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:42,723 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:43,411 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:43,723 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:44,154 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-16 07:03:44,155 DEBUG   SenderThread:46215 [sender.py:send():391] send: history
+2024-08-16 07:03:44,156 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: summary_record
+2024-08-16 07:03:44,156 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:03:44,412 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json
+2024-08-16 07:03:44,723 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:45,413 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:45,723 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:46,521 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:46,723 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:47,414 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:47,723 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:48,723 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:49,415 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:49,723 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:50,723 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:51,416 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:51,571 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:51,764 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:51,841 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-16 07:03:51,842 DEBUG   SenderThread:46215 [sender.py:send():391] send: history
+2024-08-16 07:03:51,842 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: summary_record
+2024-08-16 07:03:51,843 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:03:52,417 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json
+2024-08-16 07:03:52,724 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:53,418 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:53,724 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:54,724 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:55,418 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:55,725 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:56,618 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:03:56,711 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-16 07:03:56,712 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: stop_status
+2024-08-16 07:03:56,724 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:57,420 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:57,725 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:58,725 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:03:59,421 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:03:59,725 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:04:00,726 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:04:00,916 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-16 07:04:00,917 DEBUG   SenderThread:46215 [sender.py:send():391] send: history
+2024-08-16 07:04:00,917 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: summary_record
+2024-08-16 07:04:00,917 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: server_info
+2024-08-16 07:04:00,918 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:04:00,918 DEBUG   SenderThread:46215 [sender.py:send():391] send: telemetry
+2024-08-16 07:04:00,918 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: server_info
+2024-08-16 07:04:01,118 DEBUG   SenderThread:46215 [sender.py:send():391] send: exit
+2024-08-16 07:04:01,118 INFO    SenderThread:46215 [sender.py:send_exit():598] handling exit code: 0
+2024-08-16 07:04:01,118 INFO    SenderThread:46215 [sender.py:send_exit():600] handling runtime: 79
+2024-08-16 07:04:01,118 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:04:01,118 INFO    SenderThread:46215 [sender.py:send_exit():606] send defer
+2024-08-16 07:04:01,118 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:01,118 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 0
+2024-08-16 07:04:01,119 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:01,119 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 0
+2024-08-16 07:04:01,119 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 1
+2024-08-16 07:04:01,119 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:01,119 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 1
+2024-08-16 07:04:01,119 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:01,119 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 1
+2024-08-16 07:04:01,119 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 2
+2024-08-16 07:04:01,119 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:01,119 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 2
+2024-08-16 07:04:01,119 INFO    HandlerThread:46215 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-16 07:04:01,120 INFO    HandlerThread:46215 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-16 07:04:01,120 DEBUG   SystemMonitor:46215 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-16 07:04:01,120 DEBUG   SystemMonitor:46215 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-16 07:04:01,121 INFO    HandlerThread:46215 [interfaces.py:finish():200] Joined disk monitor
+2024-08-16 07:04:01,121 INFO    HandlerThread:46215 [interfaces.py:finish():200] Joined memory monitor
+2024-08-16 07:04:01,121 INFO    HandlerThread:46215 [interfaces.py:finish():200] Joined network monitor
+2024-08-16 07:04:01,121 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:01,121 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 2
+2024-08-16 07:04:01,121 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 3
+2024-08-16 07:04:01,121 DEBUG   SenderThread:46215 [sender.py:send():391] send: stats
+2024-08-16 07:04:01,122 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:01,122 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 3
+2024-08-16 07:04:01,122 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:01,122 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 3
+2024-08-16 07:04:01,122 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 4
+2024-08-16 07:04:01,122 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:01,122 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 4
+2024-08-16 07:04:01,122 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:01,122 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 4
+2024-08-16 07:04:01,122 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 5
+2024-08-16 07:04:01,122 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:01,123 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 5
+2024-08-16 07:04:01,123 DEBUG   SenderThread:46215 [sender.py:send():391] send: summary
+2024-08-16 07:04:01,127 INFO    SenderThread:46215 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-16 07:04:01,127 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:01,127 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 5
+2024-08-16 07:04:01,128 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 6
+2024-08-16 07:04:01,128 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:01,128 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 6
+2024-08-16 07:04:01,128 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:01,128 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 6
+2024-08-16 07:04:01,131 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: status_report
+2024-08-16 07:04:01,423 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:04:01,423 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json
+2024-08-16 07:04:01,429 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 7
+2024-08-16 07:04:01,429 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:01,429 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 7
+2024-08-16 07:04:01,429 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:01,429 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 7
+2024-08-16 07:04:02,118 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-16 07:04:02,423 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/config.yaml
+2024-08-16 07:04:02,743 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 8
+2024-08-16 07:04:02,743 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: poll_exit
+2024-08-16 07:04:02,744 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:02,744 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 8
+2024-08-16 07:04:02,744 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:02,744 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 8
+2024-08-16 07:04:02,744 INFO    SenderThread:46215 [job_builder.py:build():440] Attempting to build job artifact
+2024-08-16 07:04:02,744 INFO    SenderThread:46215 [job_builder.py:_get_source_type():569] is repo sourced job
+2024-08-16 07:04:02,746 INFO    SenderThread:46215 [job_builder.py:build():545] adding wandb-job metadata file
+2024-08-16 07:04:02,759 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 9
+2024-08-16 07:04:02,759 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:02,759 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 9
+2024-08-16 07:04:02,760 DEBUG   SenderThread:46215 [sender.py:send():391] send: artifact
+2024-08-16 07:04:03,119 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-16 07:04:03,423 INFO    Thread-84 :46215 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:04:04,395 INFO    SenderThread:46215 [sender.py:send_artifact():1549] sent artifact job-git_github.com_Komershan_airi-screening-part-1.git_scripts_compare_arena.py - {'id': 'QXJ0aWZhY3Q6MTE1MjIyNjQzOA==', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQxNDU1MzE4Nw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTE1MjIyNjQzOA==', 'versionIndex': 0}}}
+2024-08-16 07:04:04,396 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:04,396 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 9
+2024-08-16 07:04:04,396 INFO    SenderThread:46215 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-08-16 07:04:04,424 INFO    SenderThread:46215 [dir_watcher.py:finish():388] scan: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files
+2024-08-16 07:04:04,424 INFO    SenderThread:46215 [dir_watcher.py:finish():402] scan save: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-metadata.json wandb-metadata.json
+2024-08-16 07:04:04,424 INFO    SenderThread:46215 [dir_watcher.py:finish():402] scan save: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/config.yaml config.yaml
+2024-08-16 07:04:04,425 INFO    SenderThread:46215 [dir_watcher.py:finish():402] scan save: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json wandb-summary.json
+2024-08-16 07:04:04,425 INFO    SenderThread:46215 [dir_watcher.py:finish():402] scan save: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/requirements.txt requirements.txt
+2024-08-16 07:04:04,428 INFO    SenderThread:46215 [dir_watcher.py:finish():402] scan save: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log output.log
+2024-08-16 07:04:04,429 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 10
+2024-08-16 07:04:04,429 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: poll_exit
+2024-08-16 07:04:04,429 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:04,429 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 10
+2024-08-16 07:04:04,431 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:04,431 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 10
+2024-08-16 07:04:04,431 INFO    SenderThread:46215 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-16 07:04:05,037 INFO    wandb-upload_1:46215 [upload_job.py:push():130] Uploaded file /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/wandb-summary.json
+2024-08-16 07:04:05,120 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-16 07:04:05,120 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: poll_exit
+2024-08-16 07:04:05,215 INFO    wandb-upload_0:46215 [upload_job.py:push():130] Uploaded file /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/config.yaml
+2024-08-16 07:04:05,316 INFO    wandb-upload_2:46215 [upload_job.py:push():130] Uploaded file /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/requirements.txt
+2024-08-16 07:04:05,829 INFO    wandb-upload_3:46215 [upload_job.py:push():130] Uploaded file /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/files/output.log
+2024-08-16 07:04:06,029 INFO    Thread-83 (_thread_body):46215 [sender.py:transition_state():626] send defer: 11
+2024-08-16 07:04:06,029 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:06,029 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 11
+2024-08-16 07:04:06,030 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:06,030 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 11
+2024-08-16 07:04:06,030 INFO    SenderThread:46215 [file_pusher.py:join():175] waiting for file pusher
+2024-08-16 07:04:06,030 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 12
+2024-08-16 07:04:06,030 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:06,030 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 12
+2024-08-16 07:04:06,030 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:06,030 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 12
+2024-08-16 07:04:06,030 INFO    SenderThread:46215 [file_stream.py:finish():601] file stream finish called
+2024-08-16 07:04:06,120 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-16 07:04:06,665 INFO    SenderThread:46215 [file_stream.py:finish():605] file stream finish is done
+2024-08-16 07:04:06,665 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 13
+2024-08-16 07:04:06,665 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: poll_exit
+2024-08-16 07:04:06,665 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:06,666 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 13
+2024-08-16 07:04:06,666 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:06,666 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 13
+2024-08-16 07:04:06,666 INFO    SenderThread:46215 [sender.py:transition_state():626] send defer: 14
+2024-08-16 07:04:06,666 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: defer
+2024-08-16 07:04:06,666 INFO    HandlerThread:46215 [handler.py:handle_request_defer():184] handle defer: 14
+2024-08-16 07:04:06,666 DEBUG   SenderThread:46215 [sender.py:send():391] send: final
+2024-08-16 07:04:06,666 DEBUG   SenderThread:46215 [sender.py:send():391] send: footer
+2024-08-16 07:04:06,666 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: defer
+2024-08-16 07:04:06,666 INFO    SenderThread:46215 [sender.py:send_request_defer():622] handle sender defer: 14
+2024-08-16 07:04:06,667 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-16 07:04:06,667 DEBUG   SenderThread:46215 [sender.py:send_request():418] send_request: poll_exit
+2024-08-16 07:04:06,667 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-16 07:04:06,668 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: get_summary
+2024-08-16 07:04:06,668 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: sampled_history
+2024-08-16 07:04:06,668 DEBUG   HandlerThread:46215 [handler.py:handle_request():158] handle_request: shutdown
+2024-08-16 07:04:06,669 INFO    HandlerThread:46215 [handler.py:finish():882] shutting down handler
+2024-08-16 07:04:07,667 INFO    SenderThread:46215 [sender.py:finish():1631] shutting down sender
+2024-08-16 07:04:07,668 INFO    SenderThread:46215 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-16 07:04:07,668 INFO    SenderThread:46215 [file_pusher.py:join():175] waiting for file pusher
+2024-08-16 07:04:07,668 INFO    WriterThread:46215 [datastore.py:close():296] close: /home/aaderevyagin/airi_final/airi-screening-part-1/wandb/run-20240816_070239-01172441-9d3b-46c5-9211-2fd493dee914/run-01172441-9d3b-46c5-9211-2fd493dee914.wandb

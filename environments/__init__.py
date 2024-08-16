@@ -26,7 +26,7 @@ for distribution in ["odd", "even", "uniform"]:
         kwargs={
             "n_arms": 10,
             "max_steps": 100,
-            "generation_seed": 69,
+            "seed": 69,
             "distribution_type": distribution,
         },
     )

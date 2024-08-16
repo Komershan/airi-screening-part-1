@@ -19,7 +19,7 @@ class TrainConfig:
     episode_size: int = 100
     num_episodes: int = 10
     # We run ucb in environment num_train_steps times for training
-    num_train_steps: int = 10000000
+    num_train_steps: int = 10000
 
     def __post_init__(self):
         env = gym.make(self.environment)

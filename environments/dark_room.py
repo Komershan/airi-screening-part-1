@@ -78,6 +78,9 @@ class DarkRoom(gym.Env):
 
     def get_action_space_size(self):
         return 5
+    
+    def get_observation_space_size(self):
+        return self.size ** 2
 
     def set_seed(self, seed=None) -> None:
         self.seed = seed

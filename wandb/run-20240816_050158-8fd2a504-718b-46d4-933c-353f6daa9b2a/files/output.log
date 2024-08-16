@@ -1,0 +1,22 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 322, in <module>
+    train()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 277, in train
+    dataset = HistoriesDataset(config.dataset_path)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/utils/dataset_utils.py", line 124, in __init__
+    self.load(data_path)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/utils/dataset_utils.py", line 155, in load
+    arguments_dict = load_h5(self.mapping_dict, fname)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/utils/dataset_utils.py", line 52, in load_h5
+    with h5py.File(fname, "r") as f:
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/h5py/_hl/files.py", line 562, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/h5py/_hl/files.py", line 235, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 102, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = './compress_context_dataset.hdf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)

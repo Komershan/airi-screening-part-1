@@ -31,8 +31,8 @@ class TrainConfig:
     project: str = "Algorithm-Distillation"
     group: str = "In-Context-Algorithms"
     name: str = "Algorithm-Distillation-GPT"
-    dataset_path: str = "./dark_room_dataset.hdf5"
-    checkpoints_path: str = "./checkpoints/darkroom"
+    dataset_path: str = "./compress_context_dataset.hdf5"
+    checkpoints_path: str = "./checkpoints/bandits"
     from_checkpoint: Optional[str] = None
 
     seed: int = 42
@@ -47,20 +47,25 @@ class TrainConfig:
     resid_pdrop: int = 0.3
     attn_pdrop: int = 0.5
 
-    mask_prob: float = 0.3
+    mask_prob: float = 0
 
     online_iterations: int = int(1e2)  # Number of online updates
-    batch_size: int = 8
+    batch_size: int = 1
     eval_frequency: int = 1000
     n_test_episodes: int = 10
     normalize_reward: bool = False
 
     learning_rate: float = 3e-3
-    max_iters: int = 2000
+    max_iters: int = 5000
     num_workers: int = 0
 
-    vocab_size: Optional[int] = 81
-    block_size: int = 120
+    vocab_size: Optional[int] = 10
+    block_size: int = 450
+
+    use_compressed_context: bool = False
+    compressed_context_size: int = 50
+    compressed_context_count: int = 1
+    episode_size: int = 100
 
     def __post_init__(self):
         self.name = f"{self.name}-{str(uuid.uuid4())[:8]}"
@@ -82,16 +87,25 @@ class AD(nn.Module):
         assert config.block_size is not None
         self.block_size = config.block_size
 
+        padded_vocab_size = config.vocab_size + 1 if config.use_compressed_context else config.vocab_size
+
+        wpe = nn.Embedding(config.block_size, config.n_embd)
+        wte=nn.Embedding(padded_vocab_size, config.n_embd)
+        if config.use_compressed_context:
+            wpe = nn.Embedding(config.block_size, config.n_embd, padding_idx=config.vocab_size)
+            wte=nn.Embedding(padded_vocab_size, config.n_embd, padding_idx=config.vocab_size)
+
+
         self.transformer = nn.ModuleDict(
             dict(
-                wte=nn.Embedding(config.vocab_size, config.n_embd),
-                wpe=nn.Embedding(config.block_size, config.n_embd),
+                wte=wte,
+                wpe=wpe,
                 drop=nn.Dropout(config.embd_pdrop),
                 h=nn.ModuleList([Block(config) for _ in range(config.n_layer)]),
                 ln_f=nn.LayerNorm(config.n_embd),
             )
         )
-        self.lm_head = nn.Linear(config.n_embd, config.vocab_size, bias=False)
+        self.lm_head = nn.Linear(config.n_embd, padded_vocab_size, bias=False)
 
         # init all weights, and apply a special scaled init to the residual projections, per GPT-2 paper
         self.apply(self._init_weights)
@@ -106,6 +120,11 @@ class AD(nn.Module):
         print("number of parameters: %.2fM" % (n_params / 1e6,))
 
         self.history = []  # Save history to generate next actions
+
+        if self.config.use_compressed_context:
+            self.history = [config.vocab_size for i in range(self.config.compressed_context_count * self.config.compressed_context_size * 3)]
+
+        self.steps_counter = 0
 
     def _init_weights(self, module):
         if isinstance(module, nn.Linear):
@@ -208,7 +227,9 @@ class AD(nn.Module):
             # Here we generate mask for action masking
             random_probs = np.random.random((b, t - 1))
             # np_mask is default mask for action masking
-            np_mask = np.fromfunction(lambda i, j: (j % 3 == 0), shape=(b, t - 1))
+            labels_numpy = shift_labels.numpy()
+            np_mask = np.fromfunction(lambda i, j: j % 3 == 0, shape=(b, t - 1))
+            np_mask = np_mask * (labels_numpy != self.config.vocab_size)
             # Then we apply random masking for default np_mask
             mask = torch.tensor(
                 np_mask * random_probs > self.config.mask_prob, dtype=torch.float64
@@ -234,12 +255,23 @@ class AD(nn.Module):
         )
         logits = logits[:, -1, :]
         action = torch.argmax(logits).item()
+        print(logits)
+        if self.config.use_compressed_context:
+            action = torch.argmax(logits[:, -1]).item()
         self.history.append(action)
         return action
     
     # We need update_policy to add action to AD history
     def update_policy(self, action: int, reward: int):
+        self.steps_counter += 1
         self.history.append(reward)
+
+        if self.steps_counter % self.config.episode_size == 0 and self.config.use_compressed_context == True:
+            if len(self.history) == self.block_size:
+                self.history = self.history[self.config.compressed_context_size: (self.config.compressed_context_count + 1) * self.config.compressed_context_size]
+            else:
+                self.history = self.history[0:(self.steps_counter // self.config.episode_size) * self.config.compressed_context_size]
+
 
     @staticmethod
     def load_config(config_dict: dict) -> TrainConfig:

@@ -69,6 +69,9 @@ class BanditsEnv(gym.Env):
 
     def get_observation(self):
         return self.observation
+    
+    def get_observation_space_size(self):
+        return 1
 
     def get_params_dict(self):
         return {

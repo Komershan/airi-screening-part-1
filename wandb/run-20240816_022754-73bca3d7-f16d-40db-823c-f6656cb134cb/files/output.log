@@ -1,0 +1,63 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+  0%|                                                                                                                                          | 0/2000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 310, in <module>
+    train()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 293, in train
+    trainer.run()
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/trainer.py", line 96, in run
+    logits, self.loss = model(x)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 222, in forward
+    np_mask * random_probs > self.config.mask_prob, dtype=torch.float64
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'float'
+number of parameters: 25.44M
+running on device cpu
+tensor(0)
+!!! tensor([[8, 1, 0, 4, 1, 0, 0, 1, 0, 2, 1, 0, 6, 1, 0, 8, 1, 0, 4, 1, 0, 0, 1, 0,
+         2, 1, 0, 6, 1, 0, 8, 1, 0, 0, 1, 0, 2, 1, 0, 6, 1, 0, 4, 1, 0, 8, 1, 0,
+         0, 1, 0, 2, 1, 0, 6, 1, 0, 4, 1, 0, 8, 1, 0, 0, 1, 0, 2, 1, 0, 6, 1, 0,
+         4, 1, 0, 8, 1, 0, 0, 1, 0, 2, 1, 0, 6, 1, 0, 4, 1, 0, 8, 1, 0, 0, 1, 0,
+         2, 1, 0, 6, 1, 0, 4, 1, 0, 8, 1, 0, 0, 1, 0, 2, 1, 0, 6, 1, 0, 8, 1],
+        [1, 0, 0, 3, 0, 0, 7, 0, 0, 9, 0, 0, 0, 1, 0, 6, 0, 0, 8, 1, 0, 2, 1, 0,
+         0, 1, 0, 8, 1, 0, 4, 1, 0, 2, 1, 0, 0, 1, 0, 8, 1, 0, 4, 1, 0, 0, 1, 0,
+         2, 1, 0, 8, 1, 0, 4, 1, 0, 0, 1, 0, 2, 0, 0, 8, 1, 0, 4, 1, 0, 0, 1, 0,
+         8, 1, 0, 4, 0, 0, 0, 1, 0, 6, 1, 0, 8, 1, 0, 0, 1, 0, 6, 1, 0, 8, 1, 0,
+         0, 1, 0, 6, 1, 0, 8, 1, 0, 0, 1, 0, 6, 1, 0, 8, 1, 0, 0, 1, 0, 6, 1],
+        [6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 1, 0, 0, 7, 0, 0,
+         6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0,
+         6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0,
+         6, 1, 0, 6, 1, 0, 6, 1, 0, 6, 1, 0, 2, 1, 0, 2, 1, 0, 2, 1, 0, 2, 1, 0,
+         2, 1, 0, 2, 1, 0, 2, 1, 0, 2, 1, 0, 2, 1, 0, 2, 1, 0, 2, 1, 0, 2, 1],
+        [4, 1, 0, 0, 1, 0, 4, 1, 0, 8, 1, 0, 0, 1, 0, 4, 1, 0, 8, 1, 0, 0, 1, 0,
+         4, 1, 0, 0, 1, 0, 8, 1, 0, 4, 1, 0, 0, 1, 0, 8, 1, 0, 1, 0, 0, 9, 0, 0,
+         4, 1, 0, 0, 1, 0, 8, 1, 0, 4, 1, 0, 0, 1, 0, 0, 1, 0, 4, 1, 0, 8, 1, 0,
+         0, 0, 0, 4, 1, 0, 8, 1, 0, 4, 1, 0, 8, 1, 0, 4, 1, 0, 8, 1, 0, 4, 1, 0,
+         8, 1, 0, 4, 1, 0, 4, 1, 0, 8, 1, 0, 4, 1, 0, 8, 1, 0, 4, 1, 0, 8, 1],
+        [0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+         0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 4, 1, 0, 4, 0, 0, 2, 1, 0,
+         2, 0, 0, 8, 1, 0, 8, 1, 0, 8, 1, 0, 8, 1, 0, 8, 1, 0, 8, 1, 0, 8, 1, 0,
+         8, 1, 0, 4, 1, 0, 8, 1, 0, 4, 1, 0, 8, 1, 0, 4, 1, 0, 8, 1, 0, 4, 1, 0,
+         8, 1, 0, 4, 1, 0, 8, 1, 0, 4, 1, 0, 8, 1, 0, 4, 1, 0, 8, 1, 0, 4, 1],
+        [0, 1, 0, 4, 1, 0, 6, 1, 0, 0, 1, 0, 4, 1, 0, 6, 1, 0, 0, 1, 0, 4, 1, 0,
+         6, 1, 0, 0, 1, 0, 4, 1, 0, 6, 1, 0, 0, 1, 0, 4, 1, 0, 6, 1, 0, 0, 1, 0,
+         4, 1, 0, 6, 1, 0, 0, 1, 0, 4, 1, 0, 6, 1, 0, 0, 1, 0, 6, 1, 0, 4, 1, 0,
+         0, 1, 0, 6, 1, 0, 4, 1, 0, 0, 1, 0, 6, 1, 0, 4, 1, 0, 0, 1, 0, 6, 1, 0,
+         4, 1, 0, 0, 1, 0, 6, 1, 0, 4, 1, 0, 0, 1, 0, 6, 1, 0, 4, 1, 0, 0, 1],
+        [8, 1, 0, 2, 1, 0, 4, 1, 0, 8, 1, 0, 2, 1, 0, 6, 1, 0, 4, 1, 0, 8, 1, 0,
+         6, 1, 0, 2, 1, 0, 4, 1, 0, 8, 1, 0, 6, 1, 0, 2, 1, 0, 4, 1, 0, 8, 1, 0,
+         6, 1, 0, 2, 1, 0, 3, 0, 0, 5, 0, 0, 7, 0, 0, 4, 1, 0, 8, 1, 0, 6, 1, 0,
+         2, 1, 0, 4, 1, 0, 8, 1, 0, 6, 1, 0, 4, 1, 0, 2, 1, 0, 8, 1, 0, 6, 1, 0,
+         4, 1, 0, 2, 1, 0, 8, 1, 0, 6, 1, 0, 4, 1, 0, 2, 1, 0, 8, 1, 0, 6, 1],
+        [0, 1, 0, 8, 1, 0, 2, 1, 0, 6, 1, 0, 0, 1, 0, 8, 1, 0, 2, 1, 0, 6, 1, 0,
+         0, 1, 0, 1, 0, 0, 7, 0, 0, 9, 0, 0, 8, 1, 0, 2, 1, 0, 6, 1, 0, 0, 1, 0,
+         8, 1, 0, 2, 1, 0, 0, 1, 0, 6, 1, 0, 8, 1, 0, 2, 1, 0, 0, 1, 0, 6, 1, 0,
+         8, 1, 0, 0, 1, 0, 2, 1, 0, 6, 1, 0, 8, 1, 0, 0, 1, 0, 2, 1, 0, 6, 1, 0,
+         8, 1, 0, 0, 1, 0, 2, 1, 0, 6, 1, 0, 8, 1, 0, 0, 1, 0, 2, 1, 0, 6, 1]])

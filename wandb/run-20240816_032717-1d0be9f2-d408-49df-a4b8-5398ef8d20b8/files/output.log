@@ -1,0 +1,30 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/cuda/__init__.py:619: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+  0%|                                                                                                                                          | 0/2000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 316, in <module>
+    train()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 299, in train
+    trainer.run()
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/algorithms/in_context_learning/trainer.py", line 88, in run
+    batch = next(data_iter)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 316, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 141, in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 213, in collate_tensor_fn
+    return torch.stack(batch, 0, out=out)
+RuntimeError: stack expects each tensor to be equal size, but got [6201] at entry 0 and [31363] at entry 1
+{'histories': array([0, 0, 1, ..., 0, 0, 1]), 'resize_history': 40, 'vocab_size': 10, 'compress_context_size': 20, 'compress_context_count': 2, 'episode_size': 100}
+!!!! 10
+number of parameters: 25.44M
+running on device cpu

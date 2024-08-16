@@ -1,0 +1,14 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+Traceback (most recent call last):
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 316, in <module>
+    train()
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/pyrallis/argparsing.py", line 158, in wrapper_inner
+    response = fn(cfg, *args, **kwargs)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 272, in train
+    model = AD(config)
+  File "/home/aaderevyagin/airi_final/airi-screening-part-1/./algorithms/in_context_learning/AD.py", line 93, in __init__
+    wte=nn.Embedding(config.vocab_size, config.n_embd, padding_idx=config.vocab_size),
+  File "/home/aaderevyagin/airi_final/venv/lib/python3.10/site-packages/torch/nn/modules/sparse.py", line 134, in __init__
+    assert padding_idx < self.num_embeddings, 'Padding_idx must be within num_embeddings'
+AssertionError: Padding_idx must be within num_embeddings
+!!!! 10

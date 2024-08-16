@@ -26,11 +26,11 @@ from utils.utils import set_seed, wandb_init
 @dataclass
 class BenchmarkConfig:
     # Project, group and name are used for wandb initialization
-    project: str = "Test-darkroom-v2"
+    project: str = "Compare-AD-even-v1"
     group: str = "Test-Group"
     name: str = "Algorithm-Distillation"
     # Here we provide test environment name
-    environment = "Dark-Room-v0"
+    environment = "bandits-odd-v0"
     # Here we provide baseline name and baseline_checkpoint
     # If baseline is not specified, then we don't calculate normalized reward related to baseline
     baseline: Optional[str] = None
@@ -39,12 +39,12 @@ class BenchmarkConfig:
     baseline_specs = {
     }
     # In checkpoints_dir located some checkpoints that we need to evaluate
-    checkpoints_dir: str = "./checkpoints/darkroom"
+    checkpoints_dir: str = "./checkpoints/"
     # And also we need to provide saved test_tasks
-    test_tasks_filename: str = "./data/darkroom/dark_room_test.hdf5"
+    test_tasks_filename: str = "./data/bandits/test_tasks_uniform.hdf5"
     # Here we provide episode_size and episode_count for models testing
-    episode_size: int = 20
-    num_episodes: int = 1000
+    episode_size: int = 100
+    num_episodes: int = 10
     # And also we provide discount for discounted_reward calculating
     discount: float = 0.99
 
@@ -112,7 +112,7 @@ def benchmark(config: BenchmarkConfig):
     for checkpoint in os.listdir(config.checkpoints_dir):
         if checkpoint.endswith('.pt'):
             checkpoints_names.append(checkpoint)
-            loaded_checkpoint = torch.load(os.path.join(config.checkpoints_dir, checkpoint))
+            loaded_checkpoint = torch.load(os.path.join(config.checkpoints_dir, checkpoint), map_location=torch.device('cpu'))
             train_config_dict = loaded_checkpoint["train_config"]
 
             # GENERATOR_CLASS map needs for loading TrainConfig exactly for checkpoint parameters
